@@ -1,0 +1,61 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+.HeadSection{
+    background: url(https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png );
+    background-size:cover;
+    background-position: center;
+    color:white;
+    min-height: 60vh;
+}
+
+.nav-bar{
+    display:flex;
+    align-items: center;
+    justify-content:space-between ;
+    height: 65px;
+    padding: 16px 48px;
+}
+
+.nav-bar a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-menu-container{
+display: flex;
+gap:18px;
+}
+
+/* user icon style */
+.navbar-menu-container .user_icon{
+height: 25px;
+width: 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 100%;
+border: solid 2px white;
+display:none;                     
+}
+
+/* We r using media queries as user icon only display when it's condition is satisfy  . */
+/* If u want user icon to display more than 600px screen size , u can remove the line of display : none and media queries */
+@media only screen and (max-width:600px){
+    .navbar-menu-container .user_icon{
+        display:flex;
+    }
+    /* Here all the links will be not visible when the condition is satisfy */
+    .link{
+        display: none;
+    }
+
+    .HeadSection{
+        min-height: 80vh;
+    }
+}
+
